@@ -55,6 +55,7 @@
 
   <script>
     function rollDice() {
+      const diceFaces = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
       const diceElement = document.querySelector('.dice');
       const numberElement = document.getElementById('number');
       
@@ -68,6 +69,7 @@
       setTimeout(() => {
         const number = Math.floor(Math.random() * 6) + 1; // Gera número entre 1 e 6
         numberElement.textContent = number;
+        diceElement.textContent = diceFaces[number - 1];
 
         // Remove a animação
         diceElement.classList.remove('rolling');
