@@ -1,80 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simulador de Dado</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 100px;
-      background-color: #f0f8ff;
-    }
-
-    .dice {
-      font-size: 100px;
-      font-weight: bold;
-      color: #4caf50;
-      margin: 20px;
-      animation: none;
-    }
-
-    button {
-      font-size: 20px;
-      padding: 10px 20px;
-      background-color: #4caf50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #45a049;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      25% { transform: rotate(90deg); }
-      50% { transform: rotate(180deg); }
-      75% { transform: rotate(270deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    .rolling {
-      animation: spin 0.5s linear infinite;
-    }
-  </style>
+  <title>Currículo - Helton Augusto</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-  <h1>Simulador de Dado</h1>
-  <div class="dice">🎲</div>
-  <p id="number" style="font-size: 50px; color: #333;">?</p>
-  <button onclick="rollDice()">Rolar o Dado</button>
+  <header>
+    <img src="foto_perfil.jpg" alt="Foto de Perfil" class="profile-pic">
+    <h1>Helton Augusto da Silva</h1>
+    <p>Analista de Sistemas | Cloud Computing</p>
+    <div class="contact-icons">
+      <a href="mailto:heltontux@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="#"><i class="fab fa-whatsapp-square"></i></a>
+      <a href="#"><i class="fab fa-twitter-square"></i></a>
+      <a href="https://www.linkedin.com/in/helton-augusto-da-silva" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <button class="download-btn" onclick="window.print()">Download PDF</button>
+  </header>
 
-  <script>
-    function rollDice() {
-      const diceFaces = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
-      const diceElement = document.querySelector('.dice');
-      const numberElement = document.getElementById('number');
-      
-      // Limpa o número enquanto o dado está rolando
-      numberElement.textContent = '?';
+  <div class="container">
+    <div class="section">
+      <h2>Resumo</h2>
+      <p>Profissional com mais de 15 anos na área de Tecnologia da Informação, com experiência em infraestrutura, redes, suporte ao usuário e programação. Especialista em cloud computing, Graduado em Sistemas de Computação e Técnico em Informática. Atualmente é servidor público na Universidade Federal Fluminense (UFF) onde atua como Técnico de TI.</p>
+    </div>
 
-      // Adiciona a animação
-      diceElement.classList.add('rolling');
+    <div class="section">
+      <h2>Experiência</h2>
+      <ul class="info-list">
+        <li><strong>UFF</strong> – Técnico de TI (Nov/2022 - atual)</li>
+          <p>Suporte técnico, monitoramento de desempenho e performance de sistemas e aplicações, implantação sistemas, instalação de programas desktop. Manutenção de equipamentos de informática e apoio aos usuários.</p>
+        <li><strong>Diebold Nixdorf</strong> – Técnico Eletrônico I / Assistente de Suporte (2016 - 2022)</li>
+          <p>Atuação no segmento de automação comercial e bancária, responsável pela manutenção corretiva e preventiva em caixas eletrônicos e equipamentos de informática nos clientes Itaú, Caixa Econômica Federal, Banco do Brasil e Lotéricas </p>
+        <li><strong>MS Instrumentos</strong> – Suporte Técnico (2013 - 2015)</li>
+          <p>Técnico de suporte TI prestando atendimento aos usuários com uso de 
+                ferramentas de acesso remoto e responsável pelo monitoramento dos servidores, switchs, roteadores, internet, backup, contas de usuário, e toda infraestrutura de rede</p>
+        <li><strong>Interativanet</strong> – Técnico em Informática (2008 - 2013)</li>
+          <p>Serviço autônomo, empreendedor. Administrador de Redes e servidores Linux</p>
+      </ul>
+    </div>
 
-      // Após 1 segundo e meio, exibe o número sorteado
-      setTimeout(() => {
-        const number = Math.floor(Math.random() * 6) + 1; // Gera número entre 1 e 6
-        numberElement.textContent = number;
-        diceElement.textContent = diceFaces[number - 1];
+    <div class="section">
+      <h2>Formação Acadêmica</h2>
+      <ul class="info-list">
+        <li>Pós-graduação Lato Sensu - Especialização em Educação - Anhanguera (2025)</li>
+          <p><i>Docência no ensino superior</i></p>
+        <li>Pós-graduação Lato Sensu - Especialização em Ciência da Computação - Anhanguera (2024)</li>
+          <p><i>Arquitetura e projetos em cloud computing</i></p>
+        <li>Tecnólogo em Sistemas de Computação - UFF (2015–2022)</li>
+        <li>Técnico em Eletrônica - Instituto Monitor (2017–2018)</li>
+        <li>Técnico em Informática - Senac RJ (2014–2015)</li>
+      </ul>
+    </div>
 
-        // Remove a animação
-        diceElement.classList.remove('rolling');
-      }, 1500); // Tempo de espera para finalizar a função em milissegundos
-    }
-  </script>
+    <div class="section">
+      <h2>Competências & Certificações</h2>
+      <ul class="info-list">
+        <li>Shell Scripting, Linux, Git, API, Spring, SQL, JavaScript</li>
+        <li>Certificação LPIC-1, Linux Essentials, Admin. Linux</li>
+        <li>Java Básico, python, Redes, HTML5 e CSS3</li>
+        <li>AWS, Azure, GCP</li>
+        <li>Inglês Técnico </li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
